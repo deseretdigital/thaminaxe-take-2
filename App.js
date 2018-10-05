@@ -5,11 +5,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { NativeRouter, Switch, Route, Link } from 'react-router-native'
 import { Container, Header, Content, Card, CardItem, Icon, Right } from 'native-base';
-import ImagePicker from './components/ImagePicker';
-import ReduxExample from './components/ReduxExample';
-import ListButton from './components/ListButton';
 
-
+import Home from './components/Home';
 
 export default class App extends React.Component {
   // async getPermissions() {
@@ -23,17 +20,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <NativeRouter>
           <Switch>
-            <Route exact path="/" render={() => 
-              <Container>
-                <Header />
-                <Content>
-                  <ListButton to='classifieds' text='Classifieds' iconLeft='tool' />
-                  <ListButton to='cars' text='Cars' iconLeft='car' />
-                  <ListButton to='homes' text='homes' iconLeft='home' />
-                  <ListButton to='jobs' text='jobs' iconLeft='ios-briefcase' />
-                </Content>
-              </Container>
-            } />
+            <Route exact path="/" component={Home} />
             <Route path="/classifieds" render={() => <View><Text>Classifieds</Text></View>} />
             <Route path="/cars" render={() => <Text>Cars</Text>} />
             <Route path="/homes" render={() => <Text>Homes</Text>} />
