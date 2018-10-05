@@ -1,10 +1,9 @@
 import React from 'react';
 import { Permissions } from 'expo'
-import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './store';
 import { NativeRouter, Switch, Route, Link } from 'react-router-native'
-import { Container, Header, Content, Card, CardItem, Icon, Right } from 'native-base';
+import { Container, Header, Content, Card, CardItem, Icon, Right, Text, View } from 'native-base';
 
 import Home from './components/Home';
 
@@ -31,14 +30,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

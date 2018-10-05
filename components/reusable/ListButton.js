@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-native'
-import { Container, Header, Content, Card, CardItem, Icon, Right, Text } from 'native-base';
+import { Card, CardItem, Icon, Right, Text } from 'native-base';
 
 
 
@@ -9,7 +9,7 @@ export default class ListButton extends React.Component {
   static propTypes = {
     to: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    leftIcon: PropTypes.string.isRequired,
+    iconLeft: PropTypes.string.isRequired,
     rightIcon: PropTypes.string
   }
   static defaultProps = {
