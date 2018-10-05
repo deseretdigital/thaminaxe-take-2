@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
-import { ImagePicker, Permissions } from 'expo'
+import { Permissions } from 'expo'
+import ImagePicker from './components/ImagePicker';
 
 export default class App extends React.Component {
   async getPermissions() {
@@ -13,9 +14,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
-        <TouchableHighlight onPress={() => this.getPermissions()}>
-          <Text>Click Dis</Text>
-        </TouchableHighlight>
+        <ImagePicker />
       </View>
     );
   }
