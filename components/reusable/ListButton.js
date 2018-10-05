@@ -18,13 +18,13 @@ export default class ListButton extends React.Component {
   render() {
     return (
       <Card>
-        <CardItem>
-          <Icon active name={this.props.iconLeft} />
+        <CardItem style={{backgroundColor: '#F7941D'}}>
+          <Icon style={{color: 'white'}} active name={this.props.iconLeft} />
           <Link to={`/${this.props.to}`}>
-            <Text>{this.props.text}</Text>
+            <Text style={{color: 'white'}}>{this.props.text}</Text>
           </Link>
           <Right>
-            <Icon name="ios-arrow-forward" />
+            <Icon style={{color: 'white'}} name="ios-arrow-forward" />
           </Right>
         </CardItem>
       </Card>
