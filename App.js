@@ -6,6 +6,7 @@ import { NativeRouter, Switch, Route, Link } from 'react-router-native'
 import { Container, Header, Footer, FooterTab, Content, Card, CardItem, Button, Icon, Right, Text, View } from 'native-base';
 
 import Home from './components/Home';
+import Cars from './components/Cars';
 
 export default class App extends React.Component {
   // async getPermissions() {
@@ -24,7 +25,7 @@ export default class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/classifieds" render={() => <View><Text>Classifieds</Text></View>} />
-              <Route path="/cars" render={() => <Text>Cars</Text>} />
+              <Route path="/cars" render={() => <Cars />} />
               <Route path="/homes" render={() => <Text>Homes</Text>} />
               <Route path="/jobs" render={() => <Text>Jobs</Text>} />
             </Switch>
@@ -33,19 +34,19 @@ export default class App extends React.Component {
           <Footer style={{marginBottom: 20}}>
             <FooterTab>
               <Button vertical>
-                <Icon name="ios-add-circle" />
+                <Icon style={{color: '#5b92f4'}} name="ios-add-circle" />
                 <Text style={{fontSize: 8}}>Add Listing</Text>
               </Button>
               <Button vertical>
-                <Icon name="ios-save" />
+                <Icon style={{color: '#5b92f4'}} name="ios-save" />
                 <Text style={{fontSize: 8}}>Saved Searches</Text>
               </Button>
               <Button vertical>
-                <Icon name="ios-heart" />
+                <Icon style={{color: '#5b92f4'}} name="ios-heart" />
                 <Text style={{fontSize: 8}}>Favorites</Text>
               </Button>
               <Button vertical>
-                <Icon name="ios-person" />
+                <Icon style={{color: '#5b92f4'}} name="ios-person" />
                 <Text style={{fontSize: 8}}>My Listings</Text>
               </Button>
             </FooterTab>

@@ -17,17 +17,17 @@ export default class ListButton extends React.Component {
   }
   render() {
     return (
-      <Card>
-        <CardItem style={{backgroundColor: '#F7941D'}}>
-          <Icon style={{color: 'white'}} active name={this.props.iconLeft} />
-          <Link to={`/${this.props.to}`}>
-            <Text style={{color: 'white'}}>{this.props.text}</Text>
-          </Link>
-          <Right>
-            <Icon style={{color: 'white'}} name="ios-arrow-forward" />
-          </Right>
-        </CardItem>
-      </Card>
+      <Link to={`/${this.props.to}`}>
+        <Card>
+          <CardItem style={{backgroundColor: '#F7941D'}}>
+            <Icon style={{color: 'white'}} active name={this.props.iconLeft} />
+            <Text style={{flex: 1, color: 'white'}}>{this.props.text}</Text>
+            <Right>
+              <Icon style={{flex: 0, color: 'white'}} name="ios-arrow-forward" />
+            </Right>
+          </CardItem>
+        </Card>
+      </Link>
     );
   }
 }
