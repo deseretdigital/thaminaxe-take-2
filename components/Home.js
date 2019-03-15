@@ -3,6 +3,10 @@ import { View } from 'react-native'
 import { Button, Container, Header, Footer, Content, FooterTab, Icon, Text, Thumbnail } from 'native-base';
 
 import ListButton from './reusable/ListButton';
+import IconButton from './reusable/IconButton';
+
+
+import globalStyles from '../styles/global';
 
 export default class Home extends React.Component {
   render() {
@@ -18,6 +22,13 @@ export default class Home extends React.Component {
         <ListButton to='cars' text='Cars' iconLeft='car' />
         <ListButton to='homes' text='homes' iconLeft='home' />
         <ListButton to='jobs' text='jobs' iconLeft='ios-briefcase' />
+        <View style={globalStyles.homeFooter}>
+          <IconButton to="/add_listing" label="Add Listing"
+                      image={require('../assets/icon.png')} />
+          <IconButton to="/member_saved_search" label="Saved Searches"/>
+          <IconButton to="/member_favorites" label="Favorites"/>
+          <IconButton to="/member_listings" label="My Listings"/>
+        </View>
       </View>
     );
   }

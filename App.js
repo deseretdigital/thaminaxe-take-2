@@ -36,38 +36,18 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <Container>
-        <Header />
-        <Content>
-          <NativeRouter>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/classifieds" render={() => <View><Text>Classifieds</Text></View>} />
-              <Route path="/cars" render={() => <Cars />} />
-              <Route path="/homes" render={() => <Text>Homes</Text>} />
-              <Route path="/jobs" render={() => <Text>Jobs</Text>} />
-            </Switch>
-          </NativeRouter>
+          <Header />
+          <Content>
+            <NativeRouter>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/classifieds" render={() => <View><Text>Classifieds</Text></View>} />
+                <Route path="/cars" render={() => <Cars />} />
+                <Route path="/homes" render={() => <Text>Homes</Text>} />
+                <Route path="/jobs" render={() => <Text>Jobs</Text>} />
+              </Switch>
+            </NativeRouter>
           </Content>
-          <Footer style={{marginBottom: 20}}>
-            <FooterTab>
-              <Button vertical>
-                <Icon style={{color: '#5b92f4'}} name="ios-add-circle" />
-                <Text style={{fontSize: 8}}>Add Listing</Text>
-              </Button>
-              <Button vertical>
-                <Icon style={{color: '#5b92f4'}} name="ios-save" />
-                <Text style={{fontSize: 8}}>Saved Searches</Text>
-              </Button>
-              <Button vertical>
-                <Icon style={{color: '#5b92f4'}} name="ios-heart" />
-                <Text style={{fontSize: 8}}>Favorites</Text>
-              </Button>
-              <Button vertical>
-                <Icon style={{color: '#5b92f4'}} name="ios-person" />
-                <Text style={{fontSize: 8}}>My Listings</Text>
-              </Button>
-            </FooterTab>
-          </Footer>
         </Container>
       </Provider>
     );
