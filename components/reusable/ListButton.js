@@ -18,7 +18,7 @@ export default class ListButton extends React.Component {
   render() {
     return (
       <Link to={`/${this.props.to}`}>
-        <Card>
+        <Card style={{marginLeft: 10, marginRight: 10}}>
           <CardItem style={{backgroundColor: '#F7941D'}}>
             <Icon style={{color: 'white'}} active name={this.props.iconLeft} />
             <Text style={{flex: 1, color: 'white'}}>{this.props.text}</Text>
