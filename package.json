@@ -18,5 +18,27 @@
     "react-router-native": "^4.3.0",
     "redux": "^4.0.1",
     "redux-saga": "^0.16.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "standard --fix",
+      "git add"
+    ]
   }
 }
