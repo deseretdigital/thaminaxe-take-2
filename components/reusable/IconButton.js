@@ -22,12 +22,14 @@ export default class IconButton extends React.Component {
   };
   render() {
     return (
-      <Link to={`${this.props.to}`}>
-        <View style={globalStyles.iconButton}>
-          <Image source={this.props.image} style={globalStyles.image} />
-          <Text>{this.props.label}</Text>
-        </View>
-      </Link>
+      <View style={globalStyles.iconButton}>
+        <Link to={`${this.props.to}`}>
+          <View>
+            <Image source={this.props.image} style={globalStyles.image} />
+            <Text style={globalStyles.iconButton_text}>{this.props.label}</Text>
+          </View>
+        </Link>
+      </View>
     );
   }
 }

@@ -8,6 +8,9 @@ import { Container, Header, Footer, FooterTab, Content, Card, CardItem, Button, 
 import Home from './components/Home';
 import Cars from './components/Cars';
 
+
+import globalStyles from './styles/global';
+
 export default class App extends React.Component {
 
   state = {
@@ -37,7 +40,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <Container>
           <Header />
-          <Content>
+          <Content style={globalStyles.content} >
             <NativeRouter>
               <Switch>
                 <Route exact path="/" component={Home} />

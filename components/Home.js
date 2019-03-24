@@ -24,10 +24,13 @@ export default class Home extends React.Component {
         <ListButton to='jobs' text='jobs' iconLeft='ios-briefcase' />
         <View style={globalStyles.homeFooter}>
           <IconButton to="/add_listing" label="Add Listing"
-                      image={require('../assets/icon.png')} />
-          <IconButton to="/member_saved_search" label="Saved Searches"/>
-          <IconButton to="/member_favorites" label="Favorites"/>
-          <IconButton to="/member_listings" label="My Listings"/>
+                      image={require('../assets/button-icons/icon_circle-add.svg')} />
+          <IconButton to="/member_saved_search" label="Saved Searches"
+                      image={require('../assets/button-icons/icon_savedsearches.svg')}/>
+          <IconButton to="/member_favorites" label="Favorites"
+                      image={require('../assets/button-icons/icon_heart.svg')}/>
+          <IconButton to="/member_listings" label="My Listings"
+                      image={require('../assets/button-icons/icon_user.svg')}/>
         </View>
       </View>
     );

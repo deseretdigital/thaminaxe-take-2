@@ -5,22 +5,28 @@ import { StyleSheet } from 'react-native';
 import colors from './colors';
 
 const globalStyles = StyleSheet.create({
-  homeFooter:{
-    flex:1,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    maxWidth: "100%"
+  content:{
+    padding: 20
+  },
 
+  homeFooter:{
+    flexDirection: "row",
+    justifyContent: "space-between",
+    maxWidth: "100%",
+    paddingTop: 20
   },
 
   iconButton: {
-    fontSize: 16,
-    flex: 1,
-    width: 60
+    width: 75
+  },
+  iconButton_text:{
+    fontSize: 9,
+    textAlign: "center",
   },
 
   image: {
-    maxWidth:"100%",
+    width: "100%",
+    height: 50,
     resizeMode: "contain"
   }
 });
