@@ -3,10 +3,9 @@ import { View } from 'react-native'
 import { Text, Thumbnail } from 'native-base'
 import { colors } from '../constants/colors'
 import ListButton from './reusable/ListButton'
-import IconButton from './reusable/IconButton';
+import IconButton from './reusable/IconButton'
 
-
-import globalStyles from '../styles/global';
+import globalStyles from '../styles/global'
 
 export default class Home extends React.Component {
   render () {
@@ -55,22 +54,15 @@ export default class Home extends React.Component {
           buttonBGColor={colors.orange}
           textColor={colors.white}
         />
-        <ListButton
-          to='jobs'
-          text='jobs'
-          buttonBGColor={colors.lightGray}
-          textColor={colors.darkGray}
-          rightIconColor={colors.mediumGray}
-        />
         <View style={globalStyles.homeFooter}>
-          <IconButton to="/add_listing" label="Add Listing"
-                      image={require('../assets/button-icons/icon_circle-add.svg')} />
-          <IconButton to="/member_saved_search" label="Saved Searches"
-                      image={require('../assets/button-icons/icon_savedsearches.svg')}/>
-          <IconButton to="/member_favorites" label="Favorites"
-                      image={require('../assets/button-icons/icon_heart.svg')}/>
-          <IconButton to="/member_listings" label="My Listings"
-                      image={require('../assets/button-icons/icon_user.svg')}/>
+          <IconButton
+            to='/add_listing'
+            label='Add Listing'
+            image={require('../assets/button-icons/icon_circle-add.svg')}
+          />
+          <IconButton to='/member_saved_search' label='Saved Searches' />
+          <IconButton to='/member_favorites' label='Favorites' />
+          <IconButton to='/member_listings' label='My Listings' />
         </View>
       </View>
     )

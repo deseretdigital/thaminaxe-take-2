@@ -1,34 +1,26 @@
-
-
-import { StyleSheet } from 'react-native';
-
-import colors from './colors';
+import { StyleSheet } from 'react-native'
 
 const globalStyles = StyleSheet.create({
-  content:{
-    padding: 20
-  },
-
-  homeFooter:{
-    flexDirection: "row",
-    justifyContent: "space-between",
-    maxWidth: "100%",
+  homeFooter: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    maxWidth: '100%',
     paddingTop: 20
   },
 
   iconButton: {
     width: 75
   },
-  iconButton_text:{
+  iconButton_text: {
     fontSize: 9,
-    textAlign: "center",
+    textAlign: 'center'
   },
 
   image: {
-    width: "100%",
+    width: '100%',
     height: 50,
-    resizeMode: "contain"
+    resizeMode: 'contain'
   }
-});
+})
 
-export default globalStyles;
+export default globalStyles
