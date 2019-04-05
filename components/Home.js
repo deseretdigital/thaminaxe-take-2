@@ -5,8 +5,6 @@ import { colors } from '../constants/colors'
 import ListButton from './reusable/ListButton'
 import IconButton from './reusable/IconButton'
 
-import globalStyles from '../styles/global'
-
 export default class Home extends React.Component {
   render () {
     return (
@@ -54,7 +52,15 @@ export default class Home extends React.Component {
           buttonBGColor={colors.orange}
           textColor={colors.white}
         />
-        <View style={globalStyles.homeFooter}>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            maxWidth: '100%',
+            paddingTop: 20
+          }}
+        >
           <IconButton
             to='/add_listing'
             label='Add Listing'
@@ -73,7 +79,7 @@ export default class Home extends React.Component {
           <IconButton
             to='/member_listings'
             label='My Listings'
-            kslIcon='user'
+            kslIcon='user-normal-weight'
           />
         </View>
       </View>

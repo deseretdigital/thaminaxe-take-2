@@ -5,7 +5,7 @@ import { Text } from 'native-base'
 import { Image, View } from 'react-native'
 
 import KslIcon from './KslIcon'
-import globalStyles from '../../styles/global'
+import { colors } from '../../constants/colors'
 
 export default class IconButton extends React.Component {
   static propTypes = {
@@ -19,18 +19,37 @@ export default class IconButton extends React.Component {
   };
   render () {
     return (
-      <View style={globalStyles.iconButton}>
+      <View style={{ width: 75 }}>
         <Link to={`${this.props.to}`}>
           <View>
             {this.props.kslIcon ? (
               <KslIcon
                 name={this.props.kslIcon}
-                style={globalStyles.iconButton_kslIcon}
+                style={{
+                  fontSize: 40,
+                  height: 50,
+                  textAlign: 'center',
+                  color: colors.blue
+                }}
               />
             ) : (
-              <Image source={this.props.image} style={globalStyles.image} />
+              <Image
+                source={this.props.image}
+                style={{
+                  width: '100%',
+                  height: 50,
+                  resizeMode: 'contain'
+                }}
+              />
             )}
-            <Text style={globalStyles.iconButton_text}>{this.props.label}</Text>
+            <Text
+              style={{
+                fontSize: 9,
+                textAlign: 'center'
+              }}
+            >
+              {this.props.label}
+            </Text>
           </View>
         </Link>
       </View>
