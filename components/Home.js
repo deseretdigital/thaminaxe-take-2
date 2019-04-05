@@ -58,11 +58,23 @@ export default class Home extends React.Component {
           <IconButton
             to='/add_listing'
             label='Add Listing'
-            image={require('../assets/button-icons/icon_circle-add.svg')}
+            kslIcon='circle-add'
           />
-          <IconButton to='/member_saved_search' label='Saved Searches' />
-          <IconButton to='/member_favorites' label='Favorites' />
-          <IconButton to='/member_listings' label='My Listings' />
+          <IconButton
+            to='/member_saved_search'
+            label='Saved Searches'
+            kslIcon='floppy-disk'
+          />
+          <IconButton
+            to='/member_favorites'
+            label='Favorites'
+            kslIcon='heart'
+          />
+          <IconButton
+            to='/member_listings'
+            label='My Listings'
+            kslIcon='user'
+          />
         </View>
       </View>
     )

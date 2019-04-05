@@ -5,17 +5,7 @@ import { Dimensions } from 'react-native'
 import { Provider } from 'react-redux'
 import store from './store'
 import { NativeRouter, Switch, Route } from 'react-router-native'
-import {
-  Container,
-  Header,
-  Footer,
-  FooterTab,
-  Content,
-  Button,
-  Icon,
-  Text,
-  View
-} from 'native-base'
+import { Container, Header, Content, Text, View } from 'native-base'
 import Home from './components/Home'
 import Cars from './components/Cars'
 
@@ -28,6 +18,7 @@ export default class App extends React.Component {
 
   async componentWillMount () {
     await Expo.Font.loadAsync({
+      KslIcons: require('./assets/ksl-icons/font/ksl-icons.ttf'),
       Roboto: require('native-base/Fonts/Roboto.ttf'),
       Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf')
     })

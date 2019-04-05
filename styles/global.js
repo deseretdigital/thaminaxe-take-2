@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { colors } from '../constants/colors'
 
 const globalStyles = StyleSheet.create({
   homeFooter: {
@@ -14,6 +15,12 @@ const globalStyles = StyleSheet.create({
   iconButton_text: {
     fontSize: 9,
     textAlign: 'center'
+  },
+  iconButton_kslIcon: {
+    fontSize: 40,
+    height: 50,
+    textAlign: 'center',
+    color: colors.blue
   },
 
   image: {
