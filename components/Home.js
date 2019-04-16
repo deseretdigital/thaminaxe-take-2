@@ -4,11 +4,12 @@ import { Text, Thumbnail } from 'native-base'
 import { colors } from '../constants/colors'
 import ListButton from './reusable/ListButton'
 import IconButton from './reusable/IconButton'
+import GlobalContainer from './reusable/GlobalContainer'
 
 export default class Home extends React.Component {
   render () {
     return (
-      <View>
+      <GlobalContainer showBackButton={false} integratedHeader>
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
           <Thumbnail
             square
@@ -82,7 +83,7 @@ export default class Home extends React.Component {
             kslIcon='user-normal-weight'
           />
         </View>
-      </View>
+      </GlobalContainer>
     )
   }
 }
