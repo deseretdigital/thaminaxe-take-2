@@ -14,6 +14,7 @@ export default class GlobalContainer extends React.Component {
     showSearch: PropTypes.bool,
     showMenu: PropTypes.bool
   };
+
   static defaultProps = {
     showBackButton: true,
     integratedHeader: false,
@@ -21,6 +22,7 @@ export default class GlobalContainer extends React.Component {
     showSearch: true,
     showMenu: true
   };
+
   render () {
     const containerMargin = width * 0.1
     const contentStyle = {
@@ -35,7 +37,9 @@ export default class GlobalContainer extends React.Component {
             paddingTop: 23,
             height: 76,
             paddingLeft: 0,
-            paddingRight: 0
+            paddingRight: 0,
+            borderBottomColor: 'transparent',
+            borderBottomWidth: 0
           }}
         >
           <GlobalToolbar

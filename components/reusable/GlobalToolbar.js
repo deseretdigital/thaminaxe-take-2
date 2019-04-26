@@ -45,6 +45,8 @@ export default class GlobalToolbar extends React.Component {
   };
 
   render () {
+    const iconColor = this.props.showBorderAndBG ? 'white' : colors.darkGray
+
     const style = {
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -57,7 +59,8 @@ export default class GlobalToolbar extends React.Component {
     const iconStyles = {
       fontSize: 30,
       height: 40,
-      marginLeft: 20
+      marginLeft: 20,
+      color: iconColor
     }
 
     return (
@@ -66,9 +69,7 @@ export default class GlobalToolbar extends React.Component {
           this.props.showBorderAndBG
             ? {
               ...style,
-              backgroundColor: colors.lightGray,
-              borderBottomWidth: 1,
-              borderBottomColor: colors.darkGray
+              backgroundColor: colors.blue
             }
             : style
         }
@@ -90,12 +91,14 @@ export default class GlobalToolbar extends React.Component {
                 height: 40,
                 lineHeight: 40,
                 fontSize: 40,
-                marginLeft: 0
+                marginLeft: 0,
+                color: iconColor
               }}
             />
             <Text
               style={{
-                fontSize: 25
+                fontSize: 25,
+                color: iconColor
               }}
             >
               Back
