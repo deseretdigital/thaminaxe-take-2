@@ -64,22 +64,22 @@ export default class Home extends React.Component {
             },
             {
               label: 'Cars',
-              icon: { name: 'floppy-disk', set: 'KslIcon' },
+              icon: { name: 'car', set: 'AntDesign' },
               to: '/member_saved_search'
             },
             {
               label: 'Homes',
-              icon: { name: 'floppy-disk', set: 'KslIcon' },
+              icon: { name: 'house', set: 'KslIcon' },
               to: '/add_listing'
             },
             {
               label: 'Jobs',
-              icon: { name: 'floppy-disk', set: 'KslIcon' },
+              icon: { name: 'briefcase', set: 'FontAwesome' },
               to: '/add_listing'
             },
             {
               label: 'Services',
-              icon: { name: 'floppy-disk', set: 'KslIcon' },
+              icon: { name: 'tools', set: 'Octicons' },
               to: '/add_listing'
             }
           ]}

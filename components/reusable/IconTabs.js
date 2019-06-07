@@ -20,7 +20,12 @@ export default class IconTabs extends Component {
     color: PropTypes.string,
     borderColor: PropTypes.string,
     selectedBackgroundColor: PropTypes.string,
-    selectedColor: PropTypes.string
+    selectedColor: PropTypes.string,
+    borderRadius: PropTypes.number
+  };
+
+  static defaultProps = {
+    borderRadius: 8
   };
 
   addBorder (tab, styles) {
@@ -40,7 +45,7 @@ export default class IconTabs extends Component {
     return Object.assign(styles, borderStyles)
   }
 
-  getTab (tab) {
+  getTab (tab, i) {
     const background = {
       backgroundColor: tab.selected
         ? this.props.selectedBackgroundColor
@@ -48,9 +53,17 @@ export default class IconTabs extends Component {
       paddingTop: 5,
       paddingBottom: 5,
       paddingRight: 5,
-      paddingLeft: 5
+      paddingLeft: 5,
+      width: 100 / this.props.tabs.length + '%'
     }
     const color = tab.selected ? this.props.selectedColor : this.props.color
+    if (i === 0) {
+      background.borderTopLeftRadius = this.props.borderRadius
+      background.borderBottomLeftRadius = this.props.borderRadius
+    } else if (i === this.props.tabs.length - 1) {
+      background.borderTopRightRadius = this.props.borderRadius
+      background.borderBottomRightRadius = this.props.borderRadius
+    }
     return (
       <IconButton
         key={tab.label}
@@ -74,7 +87,7 @@ export default class IconTabs extends Component {
           paddingTop: 20
         }}
       >
-        {this.props.tabs.map(tab => this.getTab(tab))}
+        {this.props.tabs.map((tab, i) => this.getTab(tab, i))}
       </View>
     )
   }
