@@ -8,6 +8,7 @@ import { Text } from 'native-base'
 import Home from './components/Home'
 import Cars from './components/Cars'
 import GlobalContainer from './components/reusable/GlobalContainer'
+import AddListing from './components/AddListing'
 
 export default class App extends React.Component {
   state = {
@@ -84,6 +85,7 @@ export default class App extends React.Component {
                 </GlobalContainer>
               )}
             />
+            <Route path='/add_listing' component={AddListing} />
           </Switch>
         </NativeRouter>
       </Provider>
