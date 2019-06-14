@@ -1,5 +1,5 @@
 import React from 'react'
-import Expo from 'expo'
+import { AppLoading, Font } from 'expo'
 // import { Permissions } from 'expo'
 import { Provider } from 'react-redux'
 import store from './store'
@@ -17,7 +17,7 @@ export default class App extends React.Component {
   };
 
   async componentWillMount () {
-    await Expo.Font.loadAsync({
+    await Font.loadAsync({
       KslIcons: require('./assets/ksl-icons/font/ksl-icons.ttf'),
       Roboto: require('native-base/Fonts/Roboto.ttf'),
       Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf')
@@ -33,7 +33,7 @@ export default class App extends React.Component {
   // }
   render () {
     if (!this.state.isReady) {
-      return <Expo.AppLoading />
+      return <AppLoading onFinish={() => this.setState({ isReady: true })} />
     }
     return (
       <Provider store={store}>
