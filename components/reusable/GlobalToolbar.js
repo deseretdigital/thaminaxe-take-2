@@ -1,23 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-native'
+import { Link, withRouter } from 'react-router-native'
 import { Text } from 'native-base'
 import { View, TouchableOpacity } from 'react-native'
 
 import KslIcon from './KslIcon'
 import { colors } from '../../constants/colors'
 
-export default class GlobalToolbar extends React.Component {
-  // not sure if there is an easier way to access the router history
-  static contextTypes = {
-    router: PropTypes.shape({
-      history: PropTypes.shape({
-        push: PropTypes.func.isRequired,
-        replace: PropTypes.func.isRequired
-      }).isRequired
-    }).isRequired
-  };
-
+class GlobalToolbar extends React.Component {
   static propTypes = {
     showBackButton: PropTypes.bool,
     showBorderAndBG: PropTypes.bool,
@@ -34,7 +24,7 @@ export default class GlobalToolbar extends React.Component {
   };
 
   handleBack = () => {
-    const { history } = this.context.router
+    const { history } = this.props
 
     if (history.index === 0) {
       return false // home screen
@@ -132,3 +122,5 @@ export default class GlobalToolbar extends React.Component {
     )
   }
 }
+
+export default withRouter(GlobalToolbar)
