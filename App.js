@@ -9,6 +9,7 @@ import Home from './components/Home'
 import Cars from './components/Cars'
 import GlobalContainer from './components/reusable/GlobalContainer'
 import AddListing from './components/AddListing'
+import Generals from './components/Generals'
 
 export default class App extends React.Component {
   state = {
@@ -39,14 +40,7 @@ export default class App extends React.Component {
         <NativeRouter>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route
-              path='/classifieds'
-              render={() => (
-                <GlobalContainer>
-                  <Text>Classifieds</Text>
-                </GlobalContainer>
-              )}
-            />
+            <Route path='/classifieds' component={Generals} />
             <Route path='/cars' render={() => <Cars />} />
             <Route
               path='/homes'
